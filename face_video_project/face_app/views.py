@@ -84,7 +84,7 @@ def new_complaint(request):
 
         # Generate a unique complaint number
         complaint_no = f"CMP-{uuid.uuid4().hex[:8].upper()}"
-
+        print(complaint_no)
         try:
             # Fetch the user instance based on the session username
             user_instance = RegTb.objects.get(username=uname)
